@@ -1,0 +1,12 @@
+server:
+  port: 5555
+  error:
+    include-stacktrace: never
+
+spring:
+  application:
+    name: desafio_dio
+  profiles:
+    active:
+      - dev
+      - prd
