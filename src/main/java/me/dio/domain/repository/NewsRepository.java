@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import me.dio.domain.model.News;
 
 @Repository
-public interface NewsRepository extends JpaRepository<News, Long>{
-  
+public interface NewsRepository extends JpaRepository<News, Long> {
+
 }

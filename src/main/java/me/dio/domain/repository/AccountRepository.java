@@ -7,5 +7,5 @@ import me.dio.domain.model.Account;
 
 @Repository
 public interface AccountRepository extends JpaRepository<Account, Long> {
-  
+
 }

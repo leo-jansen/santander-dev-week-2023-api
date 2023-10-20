@@ -22,7 +22,7 @@ public record UserController(UserService userService) {
 
     @GetMapping
     @Operation(summary = "Get all users", description = "Retrieve a list of all registered users")
-    @ApiResponses(value = { 
+    @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Operation successful")
     })
     public ResponseEntity<List<UserDto>> findAll() {
@@ -33,7 +33,7 @@ public record UserController(UserService userService) {
 
     @GetMapping("/{id}")
     @Operation(summary = "Get a user by ID", description = "Retrieve a specific user based on its ID")
-    @ApiResponses(value = { 
+    @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Operation successful"),
             @ApiResponse(responseCode = "404", description = "User not found")
     })
@@ -44,7 +44,7 @@ public record UserController(UserService userService) {
 
     @PostMapping
     @Operation(summary = "Create a new user", description = "Create a new user and return the created user's data")
-    @ApiResponses(value = { 
+    @ApiResponses(value = {
             @ApiResponse(responseCode = "201", description = "User created successfully"),
             @ApiResponse(responseCode = "422", description = "Invalid user data provided")
     })
@@ -59,7 +59,7 @@ public record UserController(UserService userService) {
 
     @PutMapping("/{id}")
     @Operation(summary = "Update a user", description = "Update the data of an existing user based on its ID")
-    @ApiResponses(value = { 
+    @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "User updated successfully"),
             @ApiResponse(responseCode = "404", description = "User not found"),
             @ApiResponse(responseCode = "422", description = "Invalid user data provided")
@@ -71,7 +71,7 @@ public record UserController(UserService userService) {
 
     @DeleteMapping("/{id}")
     @Operation(summary = "Delete a user", description = "Delete an existing user based on its ID")
-    @ApiResponses(value = { 
+    @ApiResponses(value = {
             @ApiResponse(responseCode = "204", description = "User deleted successfully"),
             @ApiResponse(responseCode = "404", description = "User not found")
     })
